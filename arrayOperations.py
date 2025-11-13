@@ -17,7 +17,7 @@ def monkeyPatch_runTest(self, method):
     method.execute(ca)
     t2 = time.perf_counter()
     
-def runTest(a, method):
+def runTest(a, method, *args):
     ca = copy.copy(a)
 
     print(f"executing {method.__name__:>5} for array...")

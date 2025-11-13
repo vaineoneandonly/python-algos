@@ -19,9 +19,9 @@ def partition(a, lo, hi):
     i = lo
     for j in range(lo, hi):
         if a[j] <= pivot:
-            swap(a, a[i], a[j])
+            swap(a, i, j)
             i += 1
 
-    swap(a, a[i], a[hi])   
+    swap(a, i, hi)   
 
     return i

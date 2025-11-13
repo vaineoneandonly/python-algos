@@ -17,5 +17,5 @@ if (__name__ == "__main__"):
     #arrayOperations.runTest(a, bubbleSort)
     #arrayOperations.runTest(a, insertionSort)
     #arrayOperations.runTest(a, selectionSort)
-    arrayOperations.runTest(a, quickSort)
-    #arrayOperations.runTest(a, bucketSort)
+    #arrayOperations.runTest(a, quickSort)
+    arrayOperations.runTest(a, bucketSort)

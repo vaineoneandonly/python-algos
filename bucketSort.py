@@ -3,7 +3,7 @@ from arrayOperations import swap
 import quickSort
 
 def execute(a):
-    bucketSortStep(a, 8)
+    bucketSortStep(a, 10)
 
 def bucketSortStep(a, k):
     buckets = []
@@ -33,4 +33,5 @@ def bucketSortStep(a, k):
         quickSort.execute(buckets[i])
         #for j in range(0, nn-1):
         #    print(buckets[i][j])
-        #print(buckets[i])
+    
+    print(buckets)
