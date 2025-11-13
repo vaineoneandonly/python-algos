@@ -1,4 +1,4 @@
-from arrayOperations import swap
+from arrayOperations import findMax
 
 import quickSort
 
@@ -8,20 +8,13 @@ def execute(a):
 def bucketSortStep(a, k):
     buckets = []
 
-    maxNum = -1
-    for n in a:
-        if (n > maxNum):
-            maxNum = n
-    M = 1 + maxNum
-
-    step = M // k
+    step = (1 + findMax(a)) // k
     
     for i in range(0, k):
         buckets.append([])
 
     for key in a:
-        res = int((key / maxNum) * maxNum)
-        idx = (res // step)
+        idx = (key // step)
 
         if (idx > 0): idx -= 1
 
@@ -29,8 +22,11 @@ def bucketSortStep(a, k):
 
     n = len(buckets)
     for i in range(0, n-1):
-        nn = len(buckets[i])
         quickSort.execute(buckets[i])
-        #for j in range(0, nn-1):
-        #    print(buckets[i][j])
     
+    a.clear()
+
+    for bucket in buckets:
+        for key in bucket:
+            a.append(key)
+            

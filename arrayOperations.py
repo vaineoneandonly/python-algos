@@ -30,3 +30,11 @@ def runTest(a, method, *args):
 
 def swap(a, i, j):
     a[i], a[j] = a[j], a[i]
+
+def findMax(a):
+    maxNum = -1
+    for n in a:
+        if (n > maxNum):
+            maxNum = n
+
+    return maxNum
