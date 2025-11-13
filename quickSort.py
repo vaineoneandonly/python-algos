@@ -1,6 +1,5 @@
 from arrayOperations import swap
 
-
 def execute(a):
     n = len(a)
     quickSortStep(a, 0, n-1)
@@ -18,9 +17,9 @@ def partition(a, lo, hi):
     pivot = a[hi]
 
     i = lo
-    for j in range(lo, hi-1):
+    for j in range(lo, hi):
         if a[j] <= pivot:
-            swap(a, a[j], a[i])
+            swap(a, a[i], a[j])
             i += 1
 
     swap(a, a[i], a[hi])   
