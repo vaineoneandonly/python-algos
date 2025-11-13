@@ -1,10 +1,13 @@
 import bubbleSort
 
 import arrayOperations
+import time
+import copy
 
 if (__name__ == "__main__"):
     a = []
-    arrayOperations.fill(a, 100, 0, 10)
-    print(a)
-    bubbleSort.execute(a)
-    print(a)
+
+    arrayOperations.fill(a, 100, 0, 100)
+    arrayOperations.runTest(a, bubbleSort)
+    #would have preferred to monkey patch. maybe in the future.
+    
