@@ -10,4 +10,4 @@ def execute(a):
                 idxOfMin = j
 
         if idxOfMin != i:
-            swap(a, a[i], a[idxOfMin])
+            swap(a, i, idxOfMin)

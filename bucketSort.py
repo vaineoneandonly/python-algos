@@ -34,4 +34,3 @@ def bucketSortStep(a, k):
         #for j in range(0, nn-1):
         #    print(buckets[i][j])
     
-    print(buckets)
