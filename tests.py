@@ -1,6 +1,7 @@
 import bubbleSort
 import insertionSort
 import selectionSort
+import quickSort
 
 import arrayOperations
 
@@ -16,3 +17,4 @@ if (__name__ == "__main__"):
     
     arrayOperations.runTest(a, insertionSort)
     arrayOperations.runTest(a, selectionSort)
+    arrayOperations.runTest(a, quickSort)

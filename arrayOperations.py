@@ -11,7 +11,7 @@ def fill(a, n, min, max):
 def monkeyPatch_runTest(self, method):
     ca = copy.copy(self)
 
-    print(f"executing {method.__name__} for array...\n")
+    print(f"executing {method.__name__} for array...")
 
     t1 = time.perf_counter()
     method.execute(ca)
@@ -20,13 +20,13 @@ def monkeyPatch_runTest(self, method):
 def runTest(a, method):
     ca = copy.copy(a)
 
-    print(f"executing {method.__name__} for array...\n")
+    print(f"executing {method.__name__:>5} for array...")
 
     t1 = time.perf_counter()
     method.execute(ca)
     t2 = time.perf_counter()
 
-    print(f"elapsed time: {t2 - t1}\n")
+    print(f"elapsed time:  {(t2 - t1):.5f}  " + ("|" * int(t2 - t1)))
 
 def swap(a, i, j):
     a[i], a[j] = a[j], a[i]
