@@ -29,3 +29,6 @@ def runTest(a, method):
     t2 = time.perf_counter()
 
     print(f"elapsed time: {t2 - t1}\n\nresult: \n{ca}\n")
+
+def swap(a, i, j):
+    a[i], a[j] = a[j], a[i]

@@ -1,3 +1,5 @@
+from arrayOperations import swap
+
 def execute(a):
     n = len(a)
 
@@ -7,6 +9,6 @@ def execute(a):
         
         for i in range(1, n):
             if a[i-1] > a[i]:
-                a[i], a[i-1] = a[i-1], a[i]
+                swap(a, i, i-1)
                 swapped = False
 
