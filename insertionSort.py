@@ -7,4 +7,8 @@ def execute(a):
     while i < n:
         j = i
         while j > 0 and a[j-1] > a[j]:
-            a[j]
+            swap(a, j-1, j)
+            j -= 1
+        
+        i += 1
+
