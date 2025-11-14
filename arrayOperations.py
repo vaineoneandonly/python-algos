@@ -26,7 +26,7 @@ def runTest(a, method, *args):
     method.execute(ca)
     t2 = time.perf_counter()
 
-    print(f"elapsed time:  {(t2 - t1):.5f}  " + ("|" * int(t2 - t1)))
+    print(f"elapsed time for {method.__name__:>5}:  {(t2 - t1):.5f}  " + ("|" * int(t2 - t1)))
 
 def swap(a, i, j):
     a[i], a[j] = a[j], a[i]
