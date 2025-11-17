@@ -1,4 +1,4 @@
-from arrayOperations import findMax
+from arrayOperations import findMax, executeVisualStep
 
 import quickSort
 
@@ -29,4 +29,6 @@ def bucketSortStep(a, k):
     for bucket in buckets:
         for key in bucket:
             a.append(key)
+
+            
             

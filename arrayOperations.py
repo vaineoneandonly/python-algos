@@ -1,6 +1,9 @@
 import random
 import copy
 import time
+import os
+import termgraph
+
 
 def fill(a, n, min, max):
     for i in range(n):
@@ -26,7 +29,9 @@ def runTest(a, method, *args):
     method.execute(ca)
     t2 = time.perf_counter()
 
-    print(f"elapsed time for {method.__name__:>5}:  {(t2 - t1):.5f}  " + ("|" * int(t2 - t1)))
+    #print(f"elapsed time for {method.__name__:>5}:  {(t2 - t1):.5f}  " + ("|" * int(t2 - t1)))
+
+    return ca
 
 def swap(a, i, j):
     a[i], a[j] = a[j], a[i]
@@ -38,3 +43,18 @@ def findMax(a):
             maxNum = n
 
     return maxNum
+
+def executeVisualStep(a):
+    b = [0] * len(a)
+    for i in range(0, len(a)):
+        b[i] = str(i + 1)
+
+    data = termgraph.Data(a, b)
+    chart = termgraph.BarChart(data)
+
+    os.system("clear")
+    chart.draw()
+
+    time.sleep(0.06)
+    #input("type anything to continue.")
+    

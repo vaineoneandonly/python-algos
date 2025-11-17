@@ -1,4 +1,4 @@
-from arrayOperations import swap
+from arrayOperations import swap, executeVisualStep
 
 def execute(a):
     n = len(a)
@@ -13,7 +13,7 @@ def quickSortStep(a, lo, hi):
     quickSortStep(a, lo, p-1)
     quickSortStep(a, p+1, hi)
 
-def partition(a, lo, hi):
+def partition(a, lo, hi):   
     pivot = a[hi]
 
     i = lo

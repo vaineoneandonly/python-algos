@@ -1,8 +1,10 @@
-from arrayOperations import swap
+from arrayOperations import swap, executeVisualStep
+
 
 def execute(a):
     n = len(a)
 
+    executeVisualStep(a)
     swapped = False
     while (not swapped):
         swapped = True
@@ -12,3 +14,9 @@ def execute(a):
                 swap(a, i, i-1)
                 swapped = False
 
+        executeVisualStep(a)
+
+    executeVisualStep(a)
+
+
+    
