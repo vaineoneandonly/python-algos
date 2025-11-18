@@ -50,11 +50,15 @@ def executeVisualStep(a):
         b[i] = str(i + 1)
 
     data = termgraph.Data(a, b)
-    chart = termgraph.BarChart(data)
+    args = termgraph.Args(
+        format = "{0:01f}"
+        )
+
+    chart = termgraph.BarChart(data, args)
 
     os.system("clear")
     chart.draw()
 
-    time.sleep(0.06)
+    time.sleep(0.08)
     #input("type anything to continue.")
     

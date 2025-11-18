@@ -3,8 +3,9 @@ from arrayOperations import swap, executeVisualStep
 def execute(a):
     n = len(a)
     quickSortStep(a, 0, n-1)
-
+    
 def quickSortStep(a, lo, hi):
+    executeVisualStep(a)
     if (lo >= hi or lo < 0):
         return
     

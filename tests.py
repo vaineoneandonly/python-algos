@@ -10,6 +10,8 @@ import os
 import time
 import multiprocessing
 
+import termgraph
+
 allSorts = [bubbleSort, insertionSort, selectionSort, quickSort, bucketSort]
 
 def parallelTests():
@@ -48,7 +50,20 @@ if (__name__ == "__main__"):
     os.system("clear")
 
     a = []
-    arrayOperations.fill(a, 10000, 0, 100)
-    
-    sequentialTests()
-    parallelTests()
+
+    num = 80
+
+    b = [0] * num
+    arrayOperations.fill(a, num, 0, 1000000)
+
+    for i in range(0, num):
+        b[i] = str(i + 1)
+
+    for method in allSorts:
+        input(f"executing {method.__name__}")
+        na = arrayOperations.runTest(a, method)
+        input(f"type anything to continue.")
+        os.system("clear")
+
+    #sequentialTests()
+    #parallelTests()
